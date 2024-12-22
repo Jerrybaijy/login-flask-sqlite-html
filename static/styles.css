@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(200, 200, 200);
+    padding: 10px;
+    /* position: relative; */
+}
+
+/* ---------------------1.页眉------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    /* border: 1px solid red; */
+}
+
+/* 1.1.页眉-左侧 */
+header .left {
+    flex-grow: 1;
+    text-align: center;
+
+    /* border: 1px solid red; */
+}
+
+/* 1.2.页眉-右侧 */
+header .right {
+
+    /* border: 1px solid red; */
+}
+
+/* 1.2.1.页眉右侧按钮 */
+header button {
+    background-color: rgb(200, 200, 200);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;  /* 颜色过渡 */
+}
+
+header button:hover {
+    background-color: #e7e7e7;
+}
+
+/* ---------------------2.登录盒子------------------------------- */
+
+.login-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);  /* 遮罩层 */
+    width: 100%;
+    height: 100%;
+
+    /* border: 1px solid red; */
+}
+
+/* 2.1.登录盒子-内容 */
+.login-content {
+    position: relative;  /* 确保关闭按钮相对定位 */
+    background-color: rgb(200, 200, 200);
+    width: 300px;
+    border-radius: 10px;
+    padding: 30px;
+
+    /* border: 1px solid red; */
+}
+
+/* 2.1.1.登录盒子-内容-标题 */
+.login-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 2.1.1.登录盒子-内容-表单 */
+.login-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2.1.1.1.登录盒子-内容-表单-输入框 */
+.login-content input {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 2.1.1.2.登录盒子-内容-表单-登录按钮 */
+.login-content button {
+    padding: 10px;
+    background-color: #0066CC;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-content button:hover {
+    background-color: #0a80f5;
+}
+
+/* 2.1.1.3.登录盒子-内容-表单-提示 */
+.login-content p {
+    text-align: center;
+}
+
+/* 2.1.1.3.1.登录盒子-内容-表单-提示-链接 */
+.login-content a {
+    color: #0066CC;
+    text-decoration: none;
+}
+
+.login-content a:hover {
+    text-decoration: underline;
+}
+
+/* 2.1.1.4.登录盒子-内容-表单-关闭按钮 */
+.login-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background: none;
+    color: #0066CC;
+    cursor: pointer;
+}
+
+.login-content .close:hover {
+    background: none;
+    color: red;
+}
+
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    /* background-color: rgb(200, 200, 200);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s; */
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* 显示下拉菜单 */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }  
+
+/* ---------------------主内容------------------------------- */
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* ---------------------音乐播放器------------------------------- */
+
+.music-player {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 300px;
+  }

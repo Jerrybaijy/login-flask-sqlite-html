@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerry's Time</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <!-- 页眉 -->
+  {% include 'header.html' %}
+
+  <!-- 主内容 -->
+  <main>
+    <!-- 音乐播放器 -->
+    <div class="music-player">
+      <audio id="background-music" controls autoplay loop>
+        <source id="music-source" src="{{ url_for('static', filename='music/手嶌葵 (てしま あおい) - The Rose (extra ver.).mp3') }}"
+          type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

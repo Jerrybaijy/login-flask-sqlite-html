@@ -1,0 +1,26 @@
+<header>
+  <div class="left">
+    <h1>Welcome to Jerry's Time</h1>
+  </div>
+  <div class="right">
+    <!-- 不处于主页时，隐藏返回主页按钮 -->
+    {% if request.path != '/' %}
+    <button onclick="window.location.href='/';">返回主页</button>
+    {% endif %}
+    
+    <!-- 动态渲染登录或用户信息 -->
+    {% if 'username' in session %}
+    <div class="dropdown">
+      <button class="dropdown-toggle">{{ session['username'] }}</button>
+      <div class="dropdown-menu">
+        <a href="/user-profile">查看资料</a>
+        <a href="/logout">退出登录</a>
+      </div>
+    </div>
+    
+    <!-- 未登录，显示登录按钮 -->
+    {% else %}
+    <button onclick="window.location.href='/login';">登录</button>
+    {% endif %}
+  </div>
+</header>
